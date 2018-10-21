@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TextR</string>
+    <string name="createText">Create a new Account</string>
+    <string name="regName">Name</string>
+    <string name="regEmail">Email</string>
+    <string name="regPassword">Password</string>
+    <string name="registerBtn">REGISTER</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+    <string name="all_users">All Users</string>
+    <string name="signInBtn">SIGN INTO YOUR ACCOUNT</string>
+    <string name="welcomeText">Welcome to TextR</string>
+    <string name="loginBtn">LOGIN</string>
+    <string name="passwordL">Password</string>
+    <string name="loginTxt">Login to your Account</string>
+    <string name="emailL">Email</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="changeImage">CHANGE IMAGE</string>
+    <string name="changeStatus">CHANGE STATUS</string>
+    <string name="usersName">Display Name</string>
+    <string name="prof_pic">Profile Picture</string>
+    <string name="settStat">Be right back</string>
+
+
+</resources>

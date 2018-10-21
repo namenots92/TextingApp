@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "254874375785",
+    "firebase_url": "https://textingapp-97760.firebaseio.com",
+    "project_id": "textingapp-97760",
+    "storage_bucket": "textingapp-97760.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254874375785:android:2750bb8365904e2e",
+        "android_client_info": {
+          "package_name": "ie.textr.textingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254874375785-s7l073sd148o2kq09sp3dtlfcckqorif.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ie.textr.textingapp",
+            "certificate_hash": "ad5a8a24512134fade861d77fe4038c20efde044"
+          }
+        },
+        {
+          "client_id": "254874375785-rh4o8j5578on5l8j8acktbfdtb1m5srp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkocWKireAicQTEwWoTK0zVLlWNiyocDg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254874375785-rh4o8j5578on5l8j8acktbfdtb1m5srp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
