@@ -10,21 +10,22 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/startImage"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="211dp"
+        android:layout_marginTop="16dp"
         android:text="@string/welcomeText"
         android:textSize="30sp" />
 
     <Button
         android:id="@+id/create_Account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/signInButton"
-        android:layout_below="@+id/welcomeText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:layout_marginBottom="17dp"
+        android:layout_width="201dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="66dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/createText"
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
@@ -33,14 +34,24 @@
         android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/create_Account"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="92dp"
         android:layout_marginEnd="91dp"
-        android:layout_marginBottom="123dp"
+        android:layout_marginBottom="13dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/signInBtn"
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    <ImageView
+        android:id="@+id/startImage"
+        android:layout_width="284dp"
+        android:layout_height="188dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:contentDescription="@string/startPic"
+        app:srcCompat="@drawable/textr" />
 
 </RelativeLayout>

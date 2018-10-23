@@ -101,6 +101,7 @@ public class RegActivity extends AppCompatActivity {
                                 mRegProgress.dismiss();
                                 Intent mainIntent = new Intent(RegActivity.this, MainActivity.class);
                                 startActivity(mainIntent);
+                                Toast.makeText(RegActivity.this, "Welcome, registraiton sucessful.", Toast.LENGTH_LONG).show();
                                 finish();
                             }
                         }
@@ -108,7 +109,7 @@ public class RegActivity extends AppCompatActivity {
 
                 }else{
                     mRegProgress.hide();
-                    Toast.makeText(RegActivity.this, "Registration not sucessful, please try again.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegActivity.this, "That email address is already registered please try again.", Toast.LENGTH_LONG).show();
                 }
 
             }

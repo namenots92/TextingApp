@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                         }  else {
 
                             mLoginProgress.hide();
-                            Toast.makeText(LoginActivity.this, "Cannot sign in. Please try again.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, "Wrong email or password. Please Try again.", Toast.LENGTH_LONG).show();
                         }
 
                     }
