@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -133,6 +134,10 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(galleryIntent, "SELECT IMAGE"), GALLERY_PICK); */
             }
         });
+        if (statusButton != null)
+        {
+            Log.v("Status", "Really got the status button");
+        }
     }
 
     public void deactivate(View view){

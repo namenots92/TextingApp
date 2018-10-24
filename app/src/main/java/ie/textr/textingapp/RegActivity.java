@@ -69,6 +69,10 @@ public class RegActivity extends AppCompatActivity {
             }
         });
 
+        if (mButton != null)
+        {
+            Log.v("Registered", "Really got the register button");
+        }
     }
 
 
