@@ -91,7 +91,7 @@ public class RegActivity extends AppCompatActivity {
                     HashMap<String, String> userMap = new HashMap<>();
                     userMap.put("name", nameReg);
                     userMap.put("status", "Be back soon");
-                    userMap.put("image", "default");
+                    userMap.put("image", "textr");
                     userMap.put("thumb_image", "default");
 
                     fbDatabase.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -101,7 +101,7 @@ public class RegActivity extends AppCompatActivity {
                                 mRegProgress.dismiss();
                                 Intent mainIntent = new Intent(RegActivity.this, MainActivity.class);
                                 startActivity(mainIntent);
-                                Toast.makeText(RegActivity.this, "Welcome, registraiton sucessful.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(RegActivity.this, "Welcome, your registraiton was sucessful.", Toast.LENGTH_LONG).show();
                                 finish();
                             }
                         }

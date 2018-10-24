@@ -42,6 +42,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private Button imageButton;
     private Button statusButton;
+    private Button deactivateButton;
 
     private FirebaseAuth mAuth;
 
@@ -54,12 +55,15 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        // Creating firebase instance(Authentication)
         mAuth = FirebaseAuth.getInstance();
 
         imgView = (ImageView) findViewById(R.id.profPic);
         nameS = (TextView) findViewById(R.id.users_name);
         statusS = (TextView) findViewById(R.id.setStat);
 
+
+        deactivateButton = (Button) findViewById(R.id.deactivate);
 
         imageButton = (Button) findViewById(R.id.change_img);
 
@@ -73,6 +77,7 @@ public class SettingsActivity extends AppCompatActivity {
         userDb = FirebaseDatabase.getInstance().getReference().child("Users").child(currentUid);
 
         imgStorage = FirebaseStorage.getInstance().getReference();
+
 
         userDb.addValueEventListener(new ValueEventListener() {
             @Override
@@ -92,6 +97,13 @@ public class SettingsActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
 
+            }
+        });
+
+        deactivateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deactivate(v);
             }
         });
 
@@ -123,6 +135,26 @@ public class SettingsActivity extends AppCompatActivity {
         });
     }
 
+    public void deactivate(View view){
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        if(user!=null){
+            user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Intent intentDeactivate = new Intent(SettingsActivity.this, StartActivity.class);
+                    finish();
+                    startActivity(intentDeactivate);
+                    Toast.makeText(getApplicationContext(), "You have deactivated your account :(", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(getApplicationContext(), "Sorry we were unable to deactivate your account", Toast.LENGTH_LONG).show();
+                }
+                }
+            });
+        }
+
+    }
     @Override
     public void onStart() {
         super.onStart();

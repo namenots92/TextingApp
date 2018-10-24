@@ -43,15 +43,16 @@
 
     <TextView
         android:id="@+id/users_name"
-        android:layout_width="140dp"
+        android:layout_width="179dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="150dp"
-        android:layout_marginEnd="94dp"
+        android:layout_marginEnd="55dp"
         android:layout_marginBottom="255dp"
         android:text="@string/usersName"
+        android:textAllCaps="true"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -64,5 +65,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="217dp"
         android:text="@string/settStat" />
+
+    <Button
+        android:id="@+id/deactivate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/setStat"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginBottom="9dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="@string/deactivate"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
 </RelativeLayout>
