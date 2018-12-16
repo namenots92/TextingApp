@@ -75,14 +75,17 @@ public class SettingsActivity extends AppCompatActivity {
 
         String currentUid = currentU.getUid();
 
-        userDb = FirebaseDatabase.getInstance().getReference().child("Users").child(currentUid);
+
+
+        userDb = FirebaseDatabase.getInstance().getReference().child("Users").child(currentUid); // .child
+        userDb.keepSynced(true);
 
         imgStorage = FirebaseStorage.getInstance().getReference();
 
 
         userDb.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(DataSnapshot dataSnapshot) { // datasnapshot
                 String name = dataSnapshot.child("name").getValue().toString();
                 String image = dataSnapshot.child("image").getValue().toString();
                 String status = dataSnapshot.child("status").getValue().toString();
@@ -111,7 +114,7 @@ public class SettingsActivity extends AppCompatActivity {
         statusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String statValue = statusS.getText().toString();
+                String statValue = statusS.getText().toString(); //routing
 
                 Intent statusIntent = new Intent(SettingsActivity.this, StatusActivity.class);
                 //send Data by put Extra

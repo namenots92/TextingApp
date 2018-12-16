@@ -31,6 +31,25 @@
     <string name="num">num</string>
     <string name="name">name</string>
     <string name="deactivate">DEACTIVATE</string>
+    <string name="AllUsers">All Users</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="requests_fragment">Requests Fragment</string>
+    <string name="friends_fragment">Friends Fragment</string>
+    <string name="chats_fragment">Chats Fragment</string>
+    <string name="status">Status</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="user_display">Display Name</string>
+    <string name="user_default_status">User Default Status</string>
+    <string name="image_all_user">user_image</string>
+    <string name="display_name">Display Name</string>
+    <string name="change_user_status">Change user Status</string>
+    <string name="send_friend_request">SEND FRIEND REQUEST</string>
+    <string name="total_friends">Total Friends</string>
+    <string name="profileImageP">ProfileImageP</string>
+    <string name="decline_Request">Decline Request</string>
+    <string name="onlineimageicon">OnlineImageIcon</string>
 
 
 </resources>

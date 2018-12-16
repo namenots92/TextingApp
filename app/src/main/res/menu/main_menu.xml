@@ -11,5 +11,9 @@
         android:orderInCategory="102"
         android:title="@string/logout"
         app:showAsAction="never" />
-
+    <item
+        android:id="@+id/main_all_btn"
+        android:orderInCategory="102"
+        android:title="@string/AllUsers"
+        app:showAsAction="never" />
 </menu>

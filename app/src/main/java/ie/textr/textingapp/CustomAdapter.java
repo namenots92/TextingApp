@@ -31,7 +31,7 @@ public class CustomAdapter extends BaseAdapter {
     @Override
     public Object getItem(int position) {
         return position;
-    }
+    } // this is index
 
     @Override
     public long getItemId(int position) {

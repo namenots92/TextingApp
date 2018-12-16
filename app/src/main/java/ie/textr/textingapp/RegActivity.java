@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.HashMap;
 
@@ -91,12 +92,15 @@ public class RegActivity extends AppCompatActivity {
                     String uid = currentUser.getUid();
                     // add child instances from the database
                     fbDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
-                    // hash map is a data type to retain data, can be in a tree form.
+
+                    String device_token = FirebaseInstanceId.getInstance().getToken();
+                    // hash map is a data type to retain data, can be in a tree form. Key and value pair set
                     HashMap<String, String> userMap = new HashMap<>();
                     userMap.put("name", nameReg);
                     userMap.put("status", "Be back soon");
                     userMap.put("image", "textr");
                     userMap.put("thumb_image", "default");
+                    userMap.put("device_token", device_token);
 
                     fbDatabase.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
